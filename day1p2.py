@@ -8,7 +8,7 @@ with open('inputd1p1.txt','r')as file:
 example= ["two1nine","eightwothree","three33"]
 def day1func(example):
     sum=0
-    var_digit=[ "one", "two", "three", "four", "five", "six", "seven", "eight","nine"]
+    var_digit={ "one":1 , "two":2, "three":3, "four":4, "five":5, "six":6, "seven":7, "eight":8,"nine":9 }
     for x in example: 
         # Return first element two1nine= ["2","1","9"], then add index first and last
         #numlist = list(''.join(filter(str.isdigit, x)))

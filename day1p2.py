@@ -5,21 +5,21 @@ with open('inputd1p1.txt','r')as file:
 
 
 # Eg val inp
-example= ["two1nine","eightwothree"]
+example= ["two1nine","eightwothree","three33"]
 def day1func(example):
     sum=0
-    digits=[ "one", "two", "three", "four", "five", "six", "seven", "eight","nine"]
+    var_digit=[ "one", "two", "three", "four", "five", "six", "seven", "eight","nine"]
     for x in example: 
-        print(str(x))
-        j=str(x)
-        for x in 
-        print(j.split(digits[x],1)[1])
-        
-        """ numlist = list(''.join(filter(str.isdigit, x)))
-        num=(numlist[0])+(numlist[len(numlist)-1])
-        sum=sum+int(num)
-        #print(num1) """
-    return sum
+        # Return first element two1nine= ["2","1","9"], then add index first and last
+        #numlist = list(''.join(filter(str.isdigit, x)))
+        for y in var_digit:           
+          if y in x:
+               print(" There exists a var digit")
+        """ if any(char.isdigit() for char in x):  #To check presence of int digit
+             print(" There exists an int digit") """
+        print("End func")
+    
+    
 
 print(day1func(example))
             

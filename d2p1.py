@@ -8,9 +8,7 @@ with open('d2ip.txt','r')as file:
 # possibility = 12 red cubes, 13 green cubes, and 14 blue cubes
 # '\b([1-9]|1[0-2])\b\sred'gi to find red 12 |  ([1][0-2]\sred) | red_pat=r'([1][0-2]|[1-9])\sred'
 def cubes(inp):
-    red= 12
-    green=13
-    blue=14
+    
     game_no=0
     for game in inp:
         game_no+=1
@@ -19,19 +17,25 @@ def cubes(inp):
         green_pat=r'(\d{2}|\d)\sgreen'
         blue_pat=r'(\d{2}|\d)\sblue'
         red_balls= re.findall(red_pat,game)
-        green_balls= re.findall(red_pat,game)
+        green_balls= re.findall(green_pat,game)
         blue_balls= re.findall(blue_pat,game)
-        limit_func(12,blue_balls)
-        limit_func(12,blue_balls)
-        limit_func(12,blue_balls)
+        red=limit_func(12,red_balls)
+        green=limit_func(13,green_balls)
+        blue=limit_func(14,blue_balls)
+        print(red)
+
+        
 
         
 def limit_func(limit,set):
     for x in set:
-        if set>limit:
+        if int(x)>limit:
+            
             return False
         else:
             return True
-        
+    
+
+    
 
 cubes(inputval)

@@ -1,5 +1,5 @@
 # AOC 2k23 D2 P2
-#Cube Conundrum
+#Cube Conundrum part 2
 import re
 with open('d2ip.txt','r')as file:
     file_content=file.read()
